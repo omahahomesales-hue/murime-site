@@ -1,0 +1,29 @@
+name: Localize images
+
+# Copies the site's images off Wix into public/images and commits them,
+# so nothing breaks when the Wix plan is canceled.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [content/images.ts]
+
+permissions:
+  contents: write
+
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/localize-images.mjs
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add public/images
+          git diff --cached --quiet || git commit -m "Save site images locally"
+          git push
