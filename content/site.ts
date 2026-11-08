@@ -268,16 +268,30 @@ export const corporateConfidant = {
       },
     ] as { q: string; a: string; links?: { label: string; href: string }[] }[],
   },
-  /** Retainer program. Linked from the FAQ ("Ongoing Support"). */
+  /**
+   * Ongoing Support (the accountability program from Mel's pricing brief).
+   * Linked from the FAQ. Prices here also feed Google/AI structured data and /llms.txt.
+   * Brief's language rule: say "ongoing" / "in the room with you"; avoid "upgrade", "next level", "tier".
+   */
   ongoingSupport: {
     eyebrow: "Ongoing Support",
     title: "When one hour isn't enough.",
-    body: "Keep a confidant in your corner while the decision plays out. Choose 30, 60 or 90 days.",
+    body: "The Session gives you the decision. Ongoing Support makes sure you actually make it, with me in the room with you every week.",
     plans: [
-      { days: "30 days", price: "$4,000", note: "Starting at", amount: 4000, startingAt: true },
-      { days: "60 days", price: "$6,750", note: "", amount: 6750, startingAt: false },
-      { days: "90 days", price: "$9,000", note: "", amount: 9000, startingAt: false },
+      { days: "30 days", price: "$4,000", amount: 4000, calls: "4 weekly calls", recommended: false },
+      { days: "60 days", price: "$6,750", amount: 6750, calls: "9 weekly calls", recommended: false },
+      { days: "90 days", price: "$9,000", amount: 9000, calls: "13 weekly calls", recommended: true },
     ],
+    recommendedLabel: "Recommended",
+    includesTitle: "Every term includes",
+    includes: [
+      "A 45-minute call every week",
+      "The Agency Roadmap at kickoff: decisions made, obstacles mapped, the next 30 days structured",
+      "Access to me between calls",
+      "A written checkpoint at the midpoint",
+    ],
+    credit: "Already had The Session? Your $500 counts in full toward any term when you enroll within 7 days.",
+    payment: "Paid in full, or a 50% deposit with the balance at the midpoint.",
   },
   closing: {
     title: "One hour. One decision. Thirty days of clarity.",

@@ -20,12 +20,11 @@ export const sessionOffer = {
 export const retainerOffers = cc.ongoingSupport.plans.map((p) => ({
   "@type": "Offer",
   name: `Ongoing Support, ${p.days}`,
-  description: `Corporate Confidant Ongoing Support retainer for ${p.days}.`,
+  description: `${p.days} of ongoing Corporate Confidant support: ${p.calls}. Includes: ${cc.ongoingSupport.includes.join("; ")}. ${cc.ongoingSupport.credit}`,
+  price: p.amount,
+  priceCurrency: "USD",
   url: `${ccUrl}#ongoing-support`,
   availability: "https://schema.org/InStock",
-  priceSpecification: p.startingAt
-    ? { "@type": "PriceSpecification", minPrice: p.amount, priceCurrency: "USD" }
-    : { "@type": "PriceSpecification", price: p.amount, priceCurrency: "USD" },
 }));
 
 const amounts = [cc.sessionPrice, ...cc.ongoingSupport.plans.map((p) => p.amount)];

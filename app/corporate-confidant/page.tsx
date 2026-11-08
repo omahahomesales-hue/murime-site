@@ -143,12 +143,23 @@ export default function CorporateConfidant() {
           <p className="lead center ongoing-lead">{ongoingSupport.body}</p>
           <div className="plan-grid">
             {ongoingSupport.plans.map((p) => (
-              <article key={p.days} className="plan">
+              <article key={p.days} className={`plan${p.recommended ? " plan-recommended" : ""}`}>
+                {p.recommended && <p className="plan-badge">{ongoingSupport.recommendedLabel}</p>}
                 <h3>{p.days}</h3>
-                {p.note && <p className="plan-note">{p.note}</p>}
                 <p className="plan-price">{p.price}</p>
+                <p className="plan-calls">{p.calls}</p>
               </article>
             ))}
+          </div>
+          <div className="plan-includes">
+            <h3>{ongoingSupport.includesTitle}</h3>
+            <ul className="check-list">
+              {ongoingSupport.includes.map((i) => (
+                <li key={i}>{i}</li>
+              ))}
+            </ul>
+            <p className="plan-credit">{ongoingSupport.credit}</p>
+            <p className="plan-payment">{ongoingSupport.payment}</p>
           </div>
           <div className="actions center-actions">
             <TalkButton className="btn btn-green btn-lg" />
