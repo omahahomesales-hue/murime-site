@@ -71,9 +71,9 @@ export const home = {
   hero: {
     eyebrow: "Strategy · Leadership · Speaking",
     title: "Support for the person who supports everyone else.",
-    body: "I help founders, executives and the companies behind them make the hard calls, align their teams and grow without burning out. Fifteen years of corporate experience, now on your side of the table.",
+    body: "I help founders, executives and the companies behind them make the hard calls, align their teams and grow without burning out. Twenty years of corporate experience, now on your side of the table.",
     trust: [
-      "15 years turning “impossible” situations around",
+      "20 years turning “impossible” situations around",
       "Confidential by default",
       "Based in Omaha, working everywhere",
     ],
@@ -170,7 +170,7 @@ export const home = {
   },
   whyCare: {
     title: "Why do I care?",
-    body: "Because I've been the person everyone came to. For 15 years I turned “impossible” situations into wins, and I watched too many talented leaders burn out chasing growth at any cost. Success without fulfillment is another way to fail. I started Muri to help leaders achieve boldly and still live fully.",
+    body: "Because I've been the person everyone came to. For 20 years I turned “impossible” situations into wins, and I watched too many talented leaders burn out chasing growth at any cost. Success without fulfillment is another way to fail. I started Muri to help leaders achieve boldly and still live fully.",
     signature: "Mel",
   },
   beliefs: {
@@ -243,7 +243,7 @@ export const corporateConfidant = {
   },
   whyMe: {
     title: "Why me",
-    body: "I spent 15 years in corporate roles turning “impossible” situations around, and I was often the person everyone else leaned on. I know what it costs to carry that alone. Corporate Confidant is the conversation I wish I'd had.",
+    body: "I spent 20 years in corporate roles turning “impossible” situations around, and I was often the person everyone else leaned on. I know what it costs to carry that alone. Corporate Confidant is the conversation I wish I'd had.",
     link: "Read more about Mel",
   },
   faq: {
