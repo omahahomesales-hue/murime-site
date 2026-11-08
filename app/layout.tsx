@@ -10,6 +10,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
 import { imgSrc } from "@/lib/img";
+import { priceRange, retainerOffers, sessionOffer } from "@/lib/offers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,6 +39,12 @@ const jsonLd = {
   telephone: site.contact.phone,
   address: { "@type": "PostalAddress", addressLocality: "Omaha", addressRegion: "NE", addressCountry: "US" },
   sameAs: [site.social.facebook, site.social.linkedin],
+  priceRange,
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Corporate Confidant",
+    itemListElement: [sessionOffer, ...retainerOffers],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

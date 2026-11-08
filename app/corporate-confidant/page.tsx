@@ -3,6 +3,8 @@ import Link from "next/link";
 import { corporateConfidant as cc, ctas, site } from "@/content/site";
 import { imgSrc, imgAlt } from "@/lib/img";
 import { Steps } from "@/components/Steps";
+import { TalkButton } from "@/components/TalkButton";
+import { corporateConfidantService } from "@/lib/offers";
 
 export const metadata: Metadata = {
   title: { absolute: cc.seoTitle },
@@ -35,7 +37,7 @@ function BookButton({ className = "btn btn-green btn-lg" }: { className?: string
 }
 
 export default function CorporateConfidant() {
-  const { hero, problem, whoFor, howItWorks, promise, whyMe, faq, closing } = cc;
+  const { hero, problem, whoFor, howItWorks, promise, whyMe, faq, ongoingSupport, closing } = cc;
   return (
     <>
       {/* 1. Hero */}
@@ -115,15 +117,42 @@ export default function CorporateConfidant() {
               <p>{f.a}</p>
               {f.links && (
                 <p className="faq-links">
-                  {f.links.map((l) => (
-                    <Link key={l.href} className="text-link" href={l.href}>
-                      {l.label} <span aria-hidden="true">&rarr;</span>
-                    </Link>
-                  ))}
+                  {f.links.map((l) =>
+                    l.href.startsWith("#") ? (
+                      <a key={l.href} className="text-link" href={l.href}>
+                        {l.label} <span aria-hidden="true">&rarr;</span>
+                      </a>
+                    ) : (
+                      <Link key={l.href} className="text-link" href={l.href}>
+                        {l.label} <span aria-hidden="true">&rarr;</span>
+                      </Link>
+                    )
+                  )}
                 </p>
               )}
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* Ongoing Support (retainer) */}
+      <section className="ongoing" id="ongoing-support">
+        <div className="wrap">
+          <p className="eyebrow green center">{ongoingSupport.eyebrow}</p>
+          <h2 className="center">{ongoingSupport.title}</h2>
+          <p className="lead center ongoing-lead">{ongoingSupport.body}</p>
+          <div className="plan-grid">
+            {ongoingSupport.plans.map((p) => (
+              <article key={p.days} className="plan">
+                <h3>{p.days}</h3>
+                {p.note && <p className="plan-note">{p.note}</p>}
+                <p className="plan-price">{p.price}</p>
+              </article>
+            ))}
+          </div>
+          <div className="actions center-actions">
+            <TalkButton className="btn btn-green btn-lg" />
+          </div>
         </div>
       </section>
 
@@ -139,6 +168,7 @@ export default function CorporateConfidant() {
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(corporateConfidantService) }} />
     </>
   );
 }

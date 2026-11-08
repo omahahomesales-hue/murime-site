@@ -194,6 +194,8 @@ export const home = {
 
 export const corporateConfidant = {
   seoTitle: "Corporate Confidant™ | A Confidential Decision Session | Muri",
+  /** Price of The Session, used in search/AI structured data. Change with the button text. */
+  sessionPrice: 500,
   seoDescription:
     "One confidential hour for leaders, founders and high performers. You leave with a decision and, within 24 hours, a one-page Clarity Brief for the next 30 days. $500, with a full refund if you leave without clarity.",
   hero: {
@@ -256,11 +258,8 @@ export const corporateConfidant = {
       },
       {
         q: "What if I need more than one hour?",
-        a: "Many decisions touch a whole team or business. When yours does, we can talk about Strategic Business Consulting or a Leadership Alignment Workshop.",
-        links: [
-          { label: "Strategic Business Consulting", href: "/#consulting" },
-          { label: "Leadership Alignment Workshops", href: "/#workshops" },
-        ],
+        a: "Many decisions take more than one conversation. When yours does, Ongoing Support keeps me in your corner for 30, 60 or 90 days.",
+        links: [{ label: "Ongoing Support", href: "#ongoing-support" }],
       },
       {
         q: "Does it work for teams?",
@@ -268,6 +267,17 @@ export const corporateConfidant = {
         links: [{ label: "Leadership Alignment Workshops", href: "/#workshops" }],
       },
     ] as { q: string; a: string; links?: { label: string; href: string }[] }[],
+  },
+  /** Retainer program. Linked from the FAQ ("Ongoing Support"). */
+  ongoingSupport: {
+    eyebrow: "Ongoing Support",
+    title: "When one hour isn't enough.",
+    body: "Keep a confidant in your corner while the decision plays out. Choose 30, 60 or 90 days.",
+    plans: [
+      { days: "30 days", price: "$4,000", note: "Starting at", amount: 4000, startingAt: true },
+      { days: "60 days", price: "$6,750", note: "", amount: 6750, startingAt: false },
+      { days: "90 days", price: "$9,000", note: "", amount: 9000, startingAt: false },
+    ],
   },
   closing: {
     title: "One hour. One decision. Thirty days of clarity.",

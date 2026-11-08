@@ -269,6 +269,17 @@ p { margin: 0 0 1em; }
 .closing .more a { color: var(--gold); }
 .closing .btn-outline { border-color: var(--cream); color: var(--cream); }
 
+/* Ongoing Support (retainer) */
+.ongoing { padding: 88px 0; background: var(--white); scroll-margin-top: 72px; }
+.ongoing h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
+.ongoing-lead { color: var(--muted); max-width: 50ch; margin: 0 auto 40px; }
+.plan-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 900px; margin: 0 auto; }
+.plan { text-align: center; background: var(--cream); border: 1px solid rgba(15, 27, 45, 0.1); border-top: 4px solid var(--gold); border-radius: 6px; padding: 32px 24px; }
+.plan h3 { font-size: 1.5rem; margin-bottom: 0.4em; }
+.plan-note { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.plan-price { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 2.8rem); color: var(--navy); margin: 0; }
+.ongoing .center-actions { margin-top: 40px; }
+
 /* Extra pages */
 .page-hero { padding: 110px 0 72px; background: var(--cream); }
 .page-hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
