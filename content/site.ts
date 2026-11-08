@@ -27,37 +27,58 @@ export const site = {
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "Founder Sessions", href: "/founder-sessions" },
+  { label: "Corporate Confidant", href: "/corporate-confidant" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "The Daily Live", href: "/live" },
   { label: "Toolkit", href: "/toolkit" },
   { label: "Travel", href: "/travel" },
 ];
 
+/**
+ * Corporate Confidant: one of Muri's offers. Used on its own page
+ * (/corporate-confidant) and in the feature band on the home page.
+ */
+export const corporateConfidant = {
+  seoTitle: "Corporate Confidant | Confidential Decision Support for Leaders",
+  seoDescription:
+    "Corporate Confidant is a confidential decision-support service from Muri for leaders who are done carrying everything alone. One hour, one decision, one letter.",
+  eyebrow: "A Muri offering",
+  titleLead: "You hold everyone else's answers.",
+  titleAccent: "Who holds yours?",
+  body: "Corporate Confidant is a confidential decision-support service for leaders who are done carrying everything alone.",
+  cta: "Book the Session - $500",
+  learnMore: "How Corporate Confidant Works",
+  promise: "What you say stays here. Always.",
+  pillars: [
+    {
+      title: "One Hour",
+      body: "One private conversation with someone who has no stake in your organization's politics and no reason to tell you what you want to hear.",
+    },
+    {
+      title: "One Decision",
+      body: "Not a list of options. We name the real problem, which is usually not the one you walked in with, and the single decision that follows from it.",
+    },
+    {
+      title: "One Letter",
+      body: "Within 24 hours, a one-page Clarity Brief written to you. Reports get filed. Letters get reread at 11pm, which is when the decision actually gets made.",
+    },
+  ],
+  guarantee: "If you leave without clarity and a path forward, you pay nothing.",
+  founderLink: {
+    title: "Building something of your own?",
+    body: "Founder Sessions bring the same confidential format to founders and owners.",
+    label: "About Founder Sessions",
+  },
+};
+
 export const home = {
   hero: {
-    titleLead: "You hold everyone else's answers.",
-    titleAccent: "Who holds yours?",
-    body: "Corporate Confidant is a confidential decision-support service for leaders who are done carrying everything alone.",
-    cta: "Book the Session - $500",
-  },
-  confidant: {
-    eyebrow: "What you say stays here. Always.",
-    pillars: [
-      {
-        title: "One Hour",
-        body: "One private conversation with someone who has no stake in your organization's politics and no reason to tell you what you want to hear.",
-      },
-      {
-        title: "One Decision",
-        body: "Not a list of options. We name the real problem, which is usually not the one you walked in with, and the single decision that follows from it.",
-      },
-      {
-        title: "One Letter",
-        body: "Within 24 hours, a one-page Clarity Brief written to you. Reports get filed. Letters get reread at 11pm, which is when the decision actually gets made.",
-      },
-    ],
-    guarantee: "If you leave without clarity and a path forward, you pay nothing.",
+    eyebrow: "Muri Consulting · Omaha, NE",
+    titleLead: "Achieve boldly.",
+    titleAccent: "Live fully.",
+    body: "We help healthcare staffing firms, real estate businesses, and entrepreneurs connect strategy to execution, and grow without losing sight of what matters most.",
+    cta: "Book a Session",
+    secondaryCta: "See What We Do",
   },
   whyCare: {
     title: "Why do I care?",
@@ -97,7 +118,14 @@ export const home = {
           "The Art of Organizational Transformation",
         ],
       },
-    ],
+      {
+        title: "Corporate Confidant",
+        body: "Confidential decision support for leaders who are done carrying everything alone. One private hour, one clear decision, and a one-page Clarity Brief within 24 hours.",
+        bullets: [] as string[],
+        href: "/corporate-confidant",
+        linkLabel: "Learn more",
+      },
+    ] as { title: string; body: string; bullets: string[]; href?: string; linkLabel?: string }[],
   },
   ethos: {
     title: "Brand Ethos. Achieving Boldly, Living Fully",

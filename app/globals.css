@@ -69,6 +69,8 @@ p { margin: 0 0 1em; }
 .btn-green { background: var(--green); color: var(--white); }
 .btn-green:hover { background: var(--green-dark); }
 .btn-outline { border-color: var(--navy); color: var(--navy); }
+.btn-outline-light { border-color: rgba(246, 244, 239, 0.7); color: var(--cream); }
+.btn-outline-light:hover { background: rgba(246, 244, 239, 0.1); }
 .btn-sm { font-size: 0.9rem; padding: 0.55em 1.2em; }
 .btn-lg { font-size: 1.1rem; padding: 0.95em 2em; }
 
@@ -118,6 +120,26 @@ p { margin: 0 0 1em; }
 .hero h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); color: var(--cream); max-width: 15ch; }
 .hero-body { font-size: 1.2rem; max-width: 34ch; margin: 1.2rem 0 2rem; }
 
+/* ---------- Muri hero (home) ---------- */
+.muri-hero { background: var(--navy); color: var(--cream); padding: 88px 0 96px; }
+.muri-hero-grid { display: grid; gap: 48px; align-items: center; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .muri-hero-grid { grid-template-columns: 1.25fr 0.75fr; } }
+.muri-hero h1 { font-size: clamp(2.8rem, 6.5vw, 5rem); color: var(--cream); }
+.muri-hero .hero-body { max-width: 40ch; }
+.gold-text { color: var(--gold); }
+.headshot { width: 100%; max-width: 380px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; justify-self: center; border: 6px solid rgba(201, 164, 76, 0.55); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35); }
+.hero .actions, .muri-hero .actions { margin-top: 0; }
+.cc-band { min-height: min(70vh, 620px); }
+.cc-band h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--cream); max-width: 16ch; }
+.founder-link { padding: 88px 0; background: var(--cream); }
+.founder-link h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+.founder-link .lead { color: var(--muted); }
+.center-actions { justify-content: center; }
+.learned.learned-statement { padding: 96px 0; background: var(--white); }
+.learned-statement .lead { color: var(--muted); max-width: 52ch; margin: 0 auto; }
+.why.why-light { background: var(--cream); color: var(--ink); }
+.why.why-light h2 { color: var(--navy); }
+
 /* ---------- Corporate Confidant ---------- */
 .confidant { background: var(--navy); color: var(--cream); padding: 72px 0 64px; }
 .banner { margin: 8px auto 48px; max-width: 900px; width: 100%; aspect-ratio: 1176 / 179; object-fit: cover; }
@@ -130,7 +152,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Why do I care ---------- */
 .why { background: var(--navy); color: var(--cream); padding: 88px 0; }
-.why-grid { display: grid; gap: 48px; align-items: center; }
+.why-grid { display: grid; gap: 48px; align-items: center; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 860px) { .why-grid { grid-template-columns: 1.2fr 0.8fr; } }
 .why h2 { font-size: clamp(2.4rem, 5vw, 3.5rem); color: var(--white); }
 .why p { font-size: 1.2rem; }
@@ -139,7 +161,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Learned ---------- */
 .learned { padding: 88px 0; background: var(--cream); }
-.learned-grid { display: grid; gap: 48px; align-items: center; }
+.learned-grid { display: grid; gap: 48px; align-items: center; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 860px) { .learned-grid { grid-template-columns: 1fr 1fr; } }
 .learned img { border-radius: 6px; width: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
 .learned h2 { font-size: clamp(2.2rem, 4.6vw, 3.5rem); font-weight: 700; }
@@ -147,7 +169,9 @@ p { margin: 0 0 1em; }
 /* ---------- Services ---------- */
 .services { padding: 88px 0; background: var(--white); }
 .services h2 { font-family: var(--sans); font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 48px; }
-.service-grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.service-grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.text-link { display: inline-block; margin-top: 0.4rem; color: var(--green); font-weight: 600; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
 .service { position: relative; padding-top: 56px; }
 .service h3 { font-family: var(--sans); font-weight: 500; font-size: 1.4rem; }
 .service p, .service li { color: var(--muted); font-size: 1.02rem; }
@@ -156,6 +180,8 @@ p { margin: 0 0 1em; }
 .dot::after { content: ""; position: absolute; left: 18px; top: 6px; width: 36px; height: 36px; border-radius: 50%; background: var(--sage); opacity: 0.7; }
 .dot[data-i="1"] { background: var(--gold); }
 .dot[data-i="2"] { background: var(--navy); }
+.dot[data-i="3"] { background: var(--navy); }
+.dot[data-i="3"]::after { background: var(--gold); opacity: 0.85; }
 
 /* ---------- Ethos ---------- */
 .ethos { padding: 88px 0; background: var(--cream); }

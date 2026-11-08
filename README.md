@@ -8,6 +8,7 @@ Almost everything lives in **`content/site.ts`**. Open it on GitHub, click the p
 
 - Booking link, phone, email, and social links are at the top of that file.
 - The menu is the `nav` list.
+- The home page (Muri) is under `home`. Corporate Confidant has its own page at `/corporate-confidant`; its words are under `corporateConfidant` and are reused on the home page band and on Founder Sessions.
 - Case Studies, The Daily Live, Toolkit, and Travel are under `starterPages`. When one has real content, change its `ready: false` to `ready: true` so Google starts indexing it.
 
 Colors are at the top of **`app/globals.css`** (`--navy`, `--gold`, `--green`, `--cream`).

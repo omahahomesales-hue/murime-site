@@ -36,14 +36,14 @@ export const images = {
   portrait: {
     file: "/images/mel-portrait.jpg",
     wix: "8ba7a3_8e82fde8e10945948d1a6a53275a77ae~mv2.jpeg",
-    alt: "Mel, founder of Muri",
+    alt: "Mel at an evening event",
     width: 748,
     height: 1006,
   },
   learned: {
     file: "/images/learned.jpg",
     wix: "8ba7a3_d3f5cd50f07240aa98e2246619e79a39~mv2.jpg",
-    alt: "Mel with friends",
+    alt: "Mel, founder of Muri",
     width: 1200,
     height: 900,
   },

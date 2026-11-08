@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { founderSessions as fs, home, site } from "@/content/site";
+import { founderSessions as fs, site } from "@/content/site";
+import { ConfidantPillars } from "@/components/ConfidantPillars";
 import { imgSrc } from "@/lib/img";
 
 export const metadata: Metadata = {
@@ -26,22 +27,7 @@ export default function FounderSessions() {
           </a>
         </div>
       </section>
-      <section className="confidant">
-        <div className="wrap">
-          <p className="eyebrow light center">{home.confidant.eyebrow}</p>
-          <div className="pillars">
-            {home.confidant.pillars.map((p) => (
-              <article key={p.title} className="pillar">
-                <h2>{p.title}</h2>
-                <p>{p.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-      <div className="guarantee">
-        <p className="wrap">{home.confidant.guarantee}</p>
-      </div>
+      <ConfidantPillars />
     </>
   );
 }
