@@ -54,10 +54,10 @@ export const images = {
     width: 2500,
     height: 1330,
   },
-  ogFounder: {
-    file: "/images/og-founder-sessions.jpg",
+  ogConfidant: {
+    file: "/images/og-corporate-confidant.jpg",
     wix: "8ba7a3_8cb4741fdb044a8fa3452a79a72833e7~mv2.jpg",
-    alt: "Founder Sessions",
+    alt: "Corporate Confidant",
     width: 1200,
     height: 1200,
   },

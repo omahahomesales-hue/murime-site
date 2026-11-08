@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { nav, site } from "@/content/site";
+import { ctas, nav, site } from "@/content/site";
 import { imgSrc, imgAlt } from "@/lib/img";
 import { NavLinks } from "./NavLinks";
 
@@ -12,7 +12,7 @@ export function Header() {
         </Link>
         <NavLinks items={nav} />
         <a className="btn btn-green btn-sm header-cta" href={site.bookingUrl} target="_blank" rel="noopener">
-          Book a Session
+          {ctas.bookShort}
         </a>
       </div>
     </header>
