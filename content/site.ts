@@ -11,11 +11,12 @@ export const site = {
   /** The $500 Corporate Confidant session. Every "Book the Session" button uses this. */
   bookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=38736171",
   /**
-   * The free 30-minute intro call. Every "Start a Conversation" button uses this.
+   * The free 20-minute Fit Conversation in Acuity. Every "Start a Conversation" button uses this.
    * Paste the Acuity link for the free intro-call appointment type here once Mel
    * creates it. While it's empty, the button opens an email to Mel instead.
    */
-  introCallUrl: "",
+  introCallUrl:
+    "https://app.acuityscheduling.com/schedule/94e6cfc9/appointment/100289184/calendar/any?appointmentTypeIds[]=100289184",
   contact: {
     address: "Omaha, NE",
     phone: "402-212-2717",
@@ -159,7 +160,7 @@ export const home = {
   howItWorks: {
     title: "Starting is simple.",
     steps: [
-      { title: "We talk.", body: "A free 30-minute call about what's going on and what you need." },
+      { title: "We talk.", body: "A free 20-minute call about what's going on and what you need." },
       {
         title: "You get a recommendation.",
         body: "A plain proposal for the right format: a session, a project, a workshop or a talk. A real recommendation, with no pressure attached.",
